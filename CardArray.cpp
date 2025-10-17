@@ -70,7 +70,9 @@ int main(){
                 int card_num;
                 char card_suit;
                 cin >> card_num >> card_suit;
+                cards[i] = Card(card_num, card_suit);
         }
+
 
         int sum = 0;
         for (int a = 0; a < n; a++){
@@ -91,6 +93,7 @@ int main(){
                                 break;
                         }
                 }
+                if (duplicate) break;
         }
         cout << "Sum: " << sum << endl;
         if (flush == true){
